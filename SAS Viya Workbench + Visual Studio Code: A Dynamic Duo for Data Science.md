@@ -32,3 +32,4 @@ No **home folder** will be needed for this hands-on.
 
 ![](images/franir_2025-03-18-12-19-19.png)
 
+![](images/franir_2025-03-18-13-32-21.png)
