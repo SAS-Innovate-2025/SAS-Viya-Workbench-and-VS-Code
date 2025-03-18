@@ -1,0 +1,253 @@
+{
+  "reviews": [
+    {
+      "reviewId": 1,
+      "Review_Text": "This dress is absolutely stunning! The fabric is soft and flows beautifully. I wore it to a wedding and received so many compliments. Highly recommend!",
+      "Title": "Perfect for special occasions"
+    },
+    {
+      "reviewId": 2,
+      "Review_Text": "I love this sweater! It's cozy and warm, perfect for chilly evenings. The fit is slightly oversized, which makes it great for layering.",
+      "Title": "Cozy and stylish"
+    },
+    {
+      "reviewId": 3,
+      "Review_Text": "These jeans are amazing! They fit perfectly and have just the right amount of stretch. I could wear them all day without feeling uncomfortable.",
+      "Title": "Best jeans ever"
+    },
+    {
+      "reviewId": 4,
+      "Review_Text": "This top is so cute and versatile. I can dress it up with a skirt or wear it casually with jeans. The material is lightweight and breathable.",
+      "Title": "Great summer top"
+    },
+    {
+      "reviewId": 5,
+      "Review_Text": "I wanted to love this dress, but the fit was off for me. The waistline sat too high, and the fabric felt a bit stiff. The color, however, is gorgeous.",
+      "Title": "Beautiful color, odd fit"
+    },
+    {
+      "reviewId": 6,
+      "Review_Text": "This jacket is perfect for fall! The material is soft and warm, and the fit is slightly tailored. It’s lightweight but keeps you cozy on cooler days.",
+      "Title": "Great fall jacket"
+    },
+    {
+      "reviewId": 7,
+      "Review_Text": "The fabric of this blouse is lovely, but the sleeves are too tight. I usually wear a medium, but even sizing up didn’t help much. Disappointed.",
+      "Title": "Tight sleeves ruin it"
+    },
+    {
+      "reviewId": 8,
+      "Review_Text": "This dress is extremely comfortable and flattering. It can be dressed up or down, and the fit is true to size. The only downside is that it wrinkles easily.",
+      "Title": "Comfortable and versatile"
+    },
+    {
+      "reviewId": 9,
+      "Review_Text": "I bought this sweater for the winter, and it’s perfect! The material is thick and warm, and the design is so unique. I’ve received so many compliments.",
+      "Title": "Warm and stylish"
+    },
+    {
+      "reviewId": 10,
+      "Review_Text": "This top is very flattering and fits true to size. The lace details are a nice touch, but the fabric is a bit sheer, so you’ll need a cami underneath.",
+      "Title": "Lovely but sheer"
+    },
+    {
+      "reviewId": 11,
+      "Review_Text": "This jacket is perfect for fall! The material is soft and warm, and the fit is slightly oversized, which makes it great for layering. I’ve received so many compliments on it already!",
+      "Title": "Perfect fall jacket"
+    },
+    {
+      "reviewId": 12,
+      "Review_Text": "I love the color and design of this dress, but the fit was a bit off for me. The waistline sat too high, and the fabric felt a little stiff. Still, it’s a beautiful piece.",
+      "Title": "Beautiful but odd fit"
+    },
+    {
+      "reviewId": 13,
+      "Review_Text": "These pants are so comfortable and stylish! The elastic waistband is a game-changer, and the fabric is lightweight yet durable. Perfect for casual outings or lounging at home.",
+      "Title": "Comfortable and stylish"
+    },
+    {
+      "reviewId": 14,
+      "Review_Text": "This sweater is incredibly soft and cozy. The fit is true to size, and the color is even prettier in person. It’s become my go-to for chilly mornings.",
+      "Title": "Cozy and soft"
+    },
+    {
+      "reviewId": 15,
+      "Review_Text": "I wanted to love this top, but the neckline is too wide, and it kept slipping off my shoulders. The fabric is nice, but the fit just didn’t work for me.",
+      "Title": "Pretty but impractical"
+    },
+    {
+      "reviewId": 16,
+      "Review_Text": "This dress is stunning! The fabric flows beautifully, and the fit is very flattering. I wore it to a wedding and received so many compliments. Highly recommend!",
+      "Title": "Perfect for special occasions"
+    },
+    {
+      "reviewId": 17,
+      "Review_Text": "The material of this cardigan is lovely, but the sleeves are way too tight. I usually wear a medium, but even sizing up didn’t help much. Disappointed because the design is so cute.",
+      "Title": "Tight sleeves ruin it"
+    },
+    {
+      "reviewId": 18,
+      "Review_Text": "This top is perfect for summer! The lightweight fabric is breathable, and the floral pattern is so vibrant. It does run a bit small, so I recommend sizing up if you’re in between sizes.",
+      "Title": "Great summer top"
+    },
+    {
+      "reviewId": 19,
+      "Review_Text": "The color of this sweater is gorgeous, but the fabric is scratchy. I had to wear a long-sleeve shirt underneath to make it bearable. Not sure if I’ll keep it.",
+      "Title": "Beautiful but itchy"
+    },
+    {
+      "reviewId": 20,
+      "Review_Text": "This dress is extremely comfortable and versatile. It can be dressed up or down, and the fit is flattering. The only downside is that it wrinkles easily.",
+      "Title": "Comfortable and versatile"
+    },{
+      "reviewId": 21,
+      "Review_Text": "This jacket is lightweight yet warm, perfect for spring and fall. The fit is flattering, and the material feels durable. Highly recommend!",
+      "Title": "Great transitional jacket"
+    },
+    {
+      "reviewId": 22,
+      "Review_Text": "I love the design of this blouse, but the fabric wrinkles too easily. It’s great for a night out, but not ideal for long wear.",
+      "Title": "Stylish but high maintenance"
+    },
+    {
+      "reviewId": 23,
+      "Review_Text": "These pants are so comfortable! The elastic waistband is perfect, and the material is soft yet sturdy. Great for casual outings.",
+      "Title": "Comfortable and practical"
+    },
+    {
+      "reviewId": 24,
+      "Review_Text": "This dress is stunning! The fabric flows beautifully, and the fit is very flattering. I wore it to a party and received so many compliments.",
+      "Title": "Elegant and flattering"
+    },
+    {
+      "reviewId": 25,
+      "Review_Text": "The sweater is cozy and warm, but it sheds a lot. I love the color and fit, but the shedding is a bit annoying.",
+      "Title": "Cozy but sheds"
+    },
+    {
+      "reviewId": 26,
+      "Review_Text": "This top is perfect for summer! The lightweight fabric is breathable, and the floral pattern is vibrant. It fits true to size.",
+      "Title": "Perfect summer top"
+    },
+    {
+      "reviewId": 27,
+      "Review_Text": "I wanted to love this dress, but the fit was off. The waistline sat too high, and the fabric felt stiff. The color is beautiful, though.",
+      "Title": "Beautiful color, odd fit"
+    },
+    {
+      "reviewId": 28,
+      "Review_Text": "This cardigan is so soft and cozy! The oversized fit is perfect for layering, and the pockets are a nice touch. Highly recommend!",
+      "Title": "Cozy and practical"
+    },
+    {
+      "reviewId": 29,
+      "Review_Text": "The material of this blouse is lovely, but the sleeves are too tight. I usually wear a medium, but even sizing up didn’t help much.",
+      "Title": "Tight sleeves"
+    },
+    {
+      "reviewId": 30,
+      "Review_Text": "This dress is extremely comfortable and versatile. It can be dressed up or down, and the fit is flattering. The only downside is that it wrinkles easily.",
+      "Title": "Comfortable and versatile"
+    },
+    {
+      "reviewId": 31,
+      "Review_Text": "I bought this sweater for the winter, and it’s perfect! The material is thick and warm, and the design is unique. I’ve received many compliments.",
+      "Title": "Warm and stylish"
+    },
+    {
+      "reviewId": 32,
+      "Review_Text": "This top is very flattering and fits true to size. The lace details are a nice touch, but the fabric is a bit sheer, so you’ll need a cami underneath.",
+      "Title": "Lovely but sheer"
+    },
+    {
+      "reviewId": 33,
+      "Review_Text": "This jacket is perfect for fall! The material is soft and warm, and the fit is slightly oversized, which makes it great for layering.",
+      "Title": "Perfect fall jacket"
+    },
+    {
+      "reviewId": 34,
+      "Review_Text": "I love the color and design of this dress, but the fit was a bit off for me. The waistline sat too high, and the fabric felt stiff.",
+      "Title": "Beautiful but odd fit"
+    },
+    {
+      "reviewId": 35,
+      "Review_Text": "These pants are so comfortable and stylish! The elastic waistband is a game-changer, and the fabric is lightweight yet durable.",
+      "Title": "Comfortable and stylish"
+    },
+    {
+      "reviewId": 36,
+      "Review_Text": "This sweater is incredibly soft and cozy. The fit is true to size, and the color is even prettier in person. It’s become my go-to for chilly mornings.",
+      "Title": "Cozy and soft"
+    },
+    {
+      "reviewId": 37,
+      "Review_Text": "I wanted to love this top, but the neckline is too wide, and it kept slipping off my shoulders. The fabric is nice, but the fit didn’t work.",
+      "Title": "Pretty but impractical"
+    },
+    {
+      "reviewId": 38,
+      "Review_Text": "This dress is stunning! The fabric flows beautifully, and the fit is very flattering. I wore it to a wedding and received so many compliments.",
+      "Title": "Perfect for special occasions"
+    },
+    {
+      "reviewId": 39,
+      "Review_Text": "The material of this cardigan is lovely, but the sleeves are way too tight. I usually wear a medium, but even sizing up didn’t help much.",
+      "Title": "Tight sleeves ruin it"
+    },
+    {
+      "reviewId": 40,
+      "Review_Text": "This top is perfect for summer! The lightweight fabric is breathable, and the floral pattern is vibrant. It does run a bit small, so size up if needed.",
+      "Title": "Great summer top"
+    },
+    {
+      "reviewId": 41,
+      "Review_Text": "The color of this sweater is gorgeous, but the fabric is scratchy. I had to wear a long-sleeve shirt underneath to make it bearable.",
+      "Title": "Beautiful but itchy"
+    },
+    {
+      "reviewId": 42,
+      "Review_Text": "This dress is extremely comfortable and versatile. It can be dressed up or down, and the fit is flattering. The only downside is that it wrinkles easily.",
+      "Title": "Comfortable and versatile"
+    },
+    {
+      "reviewId": 43,
+      "Review_Text": "I bought this sweater for the winter, and it’s perfect! The material is thick and warm, and the design is unique. I’ve received many compliments.",
+      "Title": "Warm and stylish"
+    },
+    {
+      "reviewId": 44,
+      "Review_Text": "This top is very flattering and fits true to size. The lace details are a nice touch, but the fabric is a bit sheer, so you’ll need a cami underneath.",
+      "Title": "Lovely but sheer"
+    },
+    {
+      "reviewId": 45,
+      "Review_Text": "This jacket is perfect for fall! The material is soft and warm, and the fit is slightly oversized, which makes it great for layering.",
+      "Title": "Perfect fall jacket"
+    },
+    {
+      "reviewId": 46,
+      "Review_Text": "I love the color and design of this dress, but the fit was a bit off for me. The waistline sat too high, and the fabric felt stiff.",
+      "Title": "Beautiful but odd fit"
+    },
+    {
+      "reviewId": 47,
+      "Review_Text": "These pants are so comfortable and stylish! The elastic waistband is a game-changer, and the fabric is lightweight yet durable.",
+      "Title": "Comfortable and stylish"
+    },
+    {
+      "reviewId": 48,
+      "Review_Text": "This sweater is incredibly soft and cozy. The fit is true to size, and the color is even prettier in person. It’s become my go-to for chilly mornings.",
+      "Title": "Cozy and soft"
+    },
+    {
+      "reviewId": 49,
+      "Review_Text": "I wanted to love this top, but the neckline is too wide, and it kept slipping off my shoulders. The fabric is nice, but the fit didn’t work.",
+      "Title": "Pretty but impractical"
+    },
+    {
+      "reviewId": 50,
+      "Review_Text": "This dress is stunning! The fabric flows beautifully, and the fit is very flattering. I wore it to a wedding and received so many compliments.",
+      "Title": "Perfect for special occasions"
+    }
+  ]
+}
