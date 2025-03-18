@@ -14,9 +14,21 @@ In SAS Viya Workbench's welcome screen, click on **New workbench**:
 
 In the following screen, you have access to multiple settings.
 
-A workbench has:
-- a name
-- a compute configuration setting which allow the user to select the right amount of resources 
+A workbench includes the following components:
+
+- **Name**: A unique identifier for the workbench.
+- **Compute Configuration**: Allows users to select the appropriate amount of computational resources based on their requirements.
+- **Storage**: Defines the type and size of storage for data and programs.
+- **Mounting Folder**: Specifies the path used to access the defined storage.
+- **Home Folder** (optional): Provides a shared location for settings and configurations across multiple workbenches.
 
 Name the new workbench **SASInnovate2025**.
+
+Choose **2 cores, 8GiB RAM** (the smallest configuration) for the compute size.
+
+Choose the default **myfolder** storage definition and default **myfolder** mounting folder.
+
+No **home folder** will be needed for this hands-on.
+
+![](images/franir_2025-03-18-12-19-19.png)
 
