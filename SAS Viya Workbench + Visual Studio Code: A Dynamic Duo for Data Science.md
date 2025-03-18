@@ -60,7 +60,7 @@ Let's open **Visual Studio Code** as this will be the main focus of this hands-o
 
 You should see Visual Studio Code opening in a new browser tab:
 
-![](images/franir_2025-03-18-14-55-53.png)
+![](images/franir_2025-03-18-16-46-58.png)
 
 If you are not familiar with VS Code, take the time to explore the user interface.
 
@@ -69,4 +69,51 @@ The **Activity Bar** displays various views and applications, including SAS. Add
 The **Primary Side Bar** displays contextual information based on the activity selected.
 
 The **Working Area** is the place where you edit and run code, control logs and display results.
+
+The **Explorer** activity will be the main spot to organize your data and program files:
+
+![](images/franir_2025-03-18-16-08-37.png)
+
+The **Source Control** activity will be important when you work with a GIT repository:
+
+![](images/franir_2025-03-18-16-10-36.png)
+
+The Extensions activity allows you to add extensions, customize your environment, improve your productivity with open-source tools, enrich your UI with syntax highlighting editors and much more:
+
+![](images/franir_2025-03-18-16-17-51.png)
+
+SAS is a perfect example of what an extension can bring to your environment: extend default VS Code capabilities with additional features, here by integrating SAS:
+
+![](images/franir_2025-03-18-16-21-39.png)
+
+You probably notice SAS libraries that you are familiar with, like SASHELP, SASUSER and WORK.
+
+You also notice the MYFOLDER library which is a default library pointing to your default folder. You can use it if you want or you can defined additional ones.
+
+## Customizing VS Code
+
+Let's customize VS Code and choose a SAS dark theme.
+
+Open the VS Code Menu and select **File** > **Preferences** > **Theme** > **Color Theme**:
+
+![](images/franir_2025-03-18-16-48-51.png)
+
+Start typing SAS and choose SAS Dark theme:
+
+![](images/franir_2025-03-18-16-51-25.png)
+
+Back in the Explorer, I can see I'm in the default MYFOLDER folder.
+
+![](images/franir_2025-03-18-16-54-27.png)
+
+Anything stored in that folder will be saved in the storage area that I defined earlier.
+
+This is independent of the compute environment that I am using.
+
+I can then switch from a compute configuration to a bigger one easily while using the same data and programs.
+
+## Working with GIT
+
+
+
 
