@@ -136,7 +136,7 @@ Paste the following GitHub repository URL and press Enter:
 
 ![](images/franir_2025-03-19-09-17-08.png)
 
-Navigate to ```/workspaces/myfolder/``` (use the "2 dots" ![](images/franir_2025-03-19-09-37-31.png) to go up one level) or type the path, and click **OK**:
+Navigate to ```/workspaces/myfolder/``` (use the "2 dots" ![](images/franir_2025-03-19-09-37-31.png) to go up one level as you probably start from ```/home/sas```) or type the path, and click **OK**:
 
 ![](images/franir_2025-03-19-09-31-16.png)
 
@@ -147,4 +147,19 @@ When prompted about opening the cloned repository, click **Cancel**. We will sti
 You should now see your cloned repository folder in **Explorer**:
 
 ![](images/franir_2025-03-19-09-54-27.png)
+
+## Working with data
+
+​As a data scientist at an online personal styling service, you’ll use machine learning models to help us analyze customer churn. Customer “churn” simply means that our client has canceled their premium clothing subscription. And since it often is more difficult to find a new customer than keep an existing one, you will help us identify which clients are likely on the cusp of churning, so that we can find ways to retain them.​
+
+In the cloned repository, explore the **Data** folder. It contains various data sets for our project in various formats:
+
+![](images/franir_2025-03-19-10-35-52.png)
+
+- Customer churn provides metrics about customer activity over the last few months,
+- Customers describes customers’ attributes, such as their estimated income, homeowner status and birth date,
+- Subscriptions provides meaningful details about the customer’s subscriptions,
+- Reviews lists customer reviews on recent purchases,
+- And technical support evaluations gives the customers’ feedback on recent interactions with Technical Support.
+
 
