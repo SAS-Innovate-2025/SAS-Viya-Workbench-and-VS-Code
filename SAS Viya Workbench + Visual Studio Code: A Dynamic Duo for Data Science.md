@@ -2,6 +2,19 @@
 
 This hands-on workshop demonstrates how to leverage the native integration of Visual Studio Code within SAS Viya Workbench for efficient data science programming. You'll learn to seamlessly write and execute both SAS and Python code directly in the embedded VS Code environment, streamlining your workflow.
 
+Contents:
+
+- [Logging in to SAS Viya Workbench](#logging-in-to-sas-viya-workbench)
+- [Creating a new workbench](#creating-a-new-workbench)
+- [Working in Visual Studio Code](#working-in-visual-studio-code)
+- [Customizing VS Code](#customizing-vs-code)
+- [Working with Git](#working-with-git)
+- [Working with data](#working-with-data)
+  - [Read SAS data sets](#read-sas-data-sets)
+  - [Read Parquet data](#read-parquet-data)
+  - [Read a CSV file](#read-a-csv-file)
+  - [Read a JSON file](#read-a-json-file)
+
 ## Logging in to SAS Viya Workbench
 
 Follow instructor's directions to get access to SAS Viya Workbench.
@@ -154,12 +167,163 @@ You should now see your cloned repository folder in **Explorer**:
 
 In the cloned repository, explore the **Data** folder. It contains various data sets for our project in various formats:
 
-![](images/franir_2025-03-19-10-35-52.png)
+![](images/franir_2025-03-19-10-42-52.png)
 
 - Customer churn provides metrics about customer activity over the last few months,
 - Customers describes customers’ attributes, such as their estimated income, homeowner status and birth date,
-- Subscriptions provides meaningful details about the customer’s subscriptions,
 - Reviews lists customer reviews on recent purchases,
+- Subscriptions provides meaningful details about the customer’s subscriptions,
 - And technical support evaluations gives the customers’ feedback on recent interactions with Technical Support.
 
+In this hands-on, we will focus on the data preparation part of the project.
+
+We have two SAS data sets, one CSV file, one JSON file and one Parquet data set.
+
+Let's see how we can integrate those data files.
+
+### Read SAS data sets
+
+To read SAS data sets, we just need a SAS library.
+
+Create a new SAS file by selecting the VS Code Menu > **File** > **New File...**:
+
+![](images/franir_2025-03-19-10-52-04.png)
+
+Select **SAS File**:
+
+![](images/franir_2025-03-19-10-52-53.png)
+
+In the new SAS file, copy the following code:
+
+```sas
+libname churn "" ;
+```
+
+In the Explorer, select the **Data** folder, right-click and select **Copy Path**:
+
+![](images/franir_2025-03-19-10-57-33.png)
+
+Paste the copied path between the double-quotes in your code.
+
+This should look like the following:
+
+```sas
+libname churn "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
+```
+
+You're ready to submit this code using the Run button:
+
+![](images/franir_2025-03-19-11-05-21.png)
+
+A new pane should have popped up showing the SAS log for this code submission. You're like in the good old SAS Display Manager!
+
+![](images/franir_2025-03-19-11-08-05.png)
+
+Now, go to the SAS activity (extension) to view your SAS libraries.
+
+You should see the CHURN library and can open the CUSTOMERS table:
+
+![](images/franir_2025-03-19-11-12-42.png)
+
+### Read Parquet data
+
+We will access the Parquet data set using a SAS library. The Parquet file is at the exact same location as the SAS data sets. We will just use a different library engine.
+
+*Parquet is a **columnar storage file format** optimized for efficient data storage and retrieval. It is commonly used in big data processing frameworks like Apache Spark and Hadoop due to its ability to handle large datasets with high performance and reduced storage requirements.*
+
+Back in your SAS file, duplicate the libname statement.
+
+Change the library name to ```churn_pq``` for churn parquet.
+
+Add the ```parquet``` engine between the library name and the path. 
+
+You should have something similar to this:
+
+```sas
+libname churn_pq parquet "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
+```
+
+Run this line of code.
+
+Check the log:
+
+![](images/franir_2025-03-19-11-23-45.png)
+
+And go to the SAS libraries to see if you can view the Parquet data set:
+
+Indeed, you normally can:
+
+![](images/franir_2025-03-19-11-25-19.png)
+
+### Read a CSV file
+
+To read a CSV file, we will need to import it into a SAS data set.
+
+In your SAS file, add the following code:
+
+```sas
+proc import file="" out=subscriptions dbms=csv replace ;
+run ;
+```
+
+Copy the path to the ```subscriptions.csv``` file (right-click on the file > **Copy Path**) and insert it between the double-quotes.
+
+This should look like the following:
+
+```sas
+proc import file="/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/subscriptions.csv" out=subscriptions dbms=csv replace ;
+run ;
+```
+
+Run this SAS procedure, check the log and view the resulting data in the WORK library:
+
+![](images/franir_2025-03-19-11-59-01.png)
+
+### Read a JSON file
+
+To read a JSON file, we will also use a special library engine.
+
+In your SAS file, add the following code:
+
+```sas
+libname rev json "" ;
+proc datasets lib=rev ;
+quit ;
+```
+
+Copy the path to the ```reviews.json``` file (right-click on the file > **Copy Path**) and insert it between the double-quotes.
+
+This should look like the following:
+
+```sas
+libname rev json "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/reviews.json" ;
+proc datasets lib=rev ;
+quit ;
+```
+
+Run the code.
+
+The DATASETS procedure generates some output and should list the logical tables stored in the JSON file.
+
+So, you should see now a **Results** pane popping up:
+
+![](images/franir_2025-03-19-15-12-53.png)
+
+Check the log.
+
+Open the resulting REVIEWS table in the REV library.
+
+
+
+
+libname churn "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
+
+libname churn_pq parquet "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
+
+proc import file="/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/subscriptions.csv" out=subscriptions dbms=csv replace ;
+run ;
+
+libname rev json "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/reviews.json" ;
+proc datasets lib=rev ;
+quit ;
 
