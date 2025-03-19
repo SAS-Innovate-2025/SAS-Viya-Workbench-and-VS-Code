@@ -10,10 +10,15 @@ Contents:
 - [Customizing VS Code](#customizing-vs-code)
 - [Working with Git](#working-with-git)
 - [Working with data](#working-with-data)
-  - [Read SAS data sets](#read-sas-data-sets)
-  - [Read Parquet data](#read-parquet-data)
-  - [Read a CSV file](#read-a-csv-file)
-  - [Read a JSON file](#read-a-json-file)
+  - [Reading SAS data sets](#reading-sas-data-sets)
+  - [Reading Parquet data](#reading-parquet-data)
+  - [Reading a CSV file](#reading-a-csv-file)
+  - [Reading a JSON file](#reading-a-json-file)
+- [Accessing other data](#accessing-other-data)
+  - [Uploading data](#uploading-data)
+  - [Accessing databases and other cloud object storage](#accessing-databases-and-other-cloud-object-storage)
+- [Interacting with Git and GitHub](#interacting-with-git-and-github)
+- [Working with SAS notebooks](#working-with-sas-notebooks)
 
 ## Logging in to SAS Viya Workbench
 
@@ -181,7 +186,9 @@ We have two SAS data sets, one CSV file, one JSON file and one Parquet data set.
 
 Let's see how we can integrate those data files.
 
-### Read SAS data sets
+*Note: Storing data in a Git repository is generally not recommended. While Git excels at version control and collaboration on text-based files like source code, it is not optimized for handling large datasets or binary files. In this hands-on example, we stored sample data in Git for simplicity.*
+
+### Reading SAS data sets
 
 To read SAS data sets, we just need a SAS library.
 
@@ -225,11 +232,11 @@ You should see the CHURN library and can open the CUSTOMERS table:
 
 ![](images/franir_2025-03-19-11-12-42.png)
 
-### Read Parquet data
+### Reading Parquet data
 
 We will access the Parquet data set using a SAS library. The Parquet file is at the exact same location as the SAS data sets. We will just use a different library engine.
 
-*Parquet is a **columnar storage file format** optimized for efficient data storage and retrieval. It is commonly used in big data processing frameworks like Apache Spark and Hadoop due to its ability to handle large datasets with high performance and reduced storage requirements.*
+*Note: Parquet is a **columnar storage file format** optimized for efficient data storage and retrieval. It is commonly used in big data processing frameworks like Apache Spark and Hadoop due to its ability to handle large datasets with high performance and reduced storage requirements.*
 
 Back in your SAS file, duplicate the libname statement.
 
@@ -255,7 +262,7 @@ Indeed, you normally can:
 
 ![](images/franir_2025-03-19-11-25-19.png)
 
-### Read a CSV file
+### Reading a CSV file
 
 To read a CSV file, we will need to import it into a SAS data set.
 
@@ -279,7 +286,7 @@ Run this SAS procedure, check the log and view the resulting data in the WORK li
 
 ![](images/franir_2025-03-19-11-59-01.png)
 
-### Read a JSON file
+### Reading a JSON file
 
 To read a JSON file, we will also use a special library engine.
 
@@ -309,21 +316,70 @@ So, you should see now a **Results** pane popping up:
 
 ![](images/franir_2025-03-19-15-12-53.png)
 
+Here we go. We have our three SAS pillars in VS Code: editor, log and output.
+
 Check the log.
 
 Open the resulting REVIEWS table in the REV library.
 
+## Accessing other data
+
+### Uploading data
+
+### Accessing databases and other cloud object storage
+
+## Interacting with Git and GitHub
+
+Save the SAS program by selecting VS Code Menu > **File** > **Save** and save it in your cloned repository under Programs.
+
+Navigate to ```/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Programs``` and name it ```data_access.sas```:
+
+![](images/franir_2025-03-19-15-27-24.png)
+
+Click **OK**.
+
+You should notice that VS Code has detected a change in your cloned repository. Indeed, your **Source Control** activity should have a badge with at least one pending change:
+
+![](images/franir_2025-03-19-15-36-31.png)
+
+Open the **Source Control** activity and observe that the new SAS program that you created is listed as a pending change in the local cloned repository:
+
+![](images/franir_2025-03-19-15-40-25.png)
+
+You can go ahead and commit the change in the local cloned repository.
+
+Click the **Stage All Changes** button:
+
+![](images/franir_2025-03-19-15-44-46.png)
+
+*Note: Clicking either of the + buttons will have the same effect, as there is only one change.*
+
+Add a commit message and click **Commit**:
+
+![](images/franir_2025-03-19-15-47-00.png)
+
+All right. There's a few additional configuration steps needed to be able to commit to a git repository. Click **Cancel**:
+
+![](images/franir_2025-03-19-15-55-19.png)
+
+We'll stop here but you get the idea.
+
+Once you commit a change locally, you'd have to push the changes to the remote repository, GitHub here, which would require to be authenticated against GitHub.
+
+## Working with SAS notebooks
+
+One of the nicest features of SAS integration in VS Studio Code is the ability to create notebooks.
+
+A SAS notebook is similar to a Jupyter notebook. It allows you to combine text and SAS instructions and therefore document your actions in a nice-looking way.
+
+Create a new file by selecting the VS Code Menu > **File** > **New File...**.
+
+Select **SAS Notebook**:
+
+![](images/franir_2025-03-19-16-09-46.png)
 
 
 
-libname churn "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
 
-libname churn_pq parquet "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data" ;
 
-proc import file="/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/subscriptions.csv" out=subscriptions dbms=csv replace ;
-run ;
-
-libname rev json "/workspaces/myfolder/SAS-Viya-Workbench-and-VS-Code/Data/reviews.json" ;
-proc datasets lib=rev ;
-quit ;
 
