@@ -98,22 +98,53 @@ Open the VS Code Menu and select **File** > **Preferences** > **Theme** > **Colo
 
 ![](images/franir_2025-03-18-16-48-51.png)
 
-Start typing SAS and choose SAS Dark theme:
+Start typing "SAS" and choose SAS Dark theme:
 
 ![](images/franir_2025-03-18-16-51-25.png)
 
-Back in the Explorer, I can see I'm in the default MYFOLDER folder.
+Back in the Explorer, you can see you're in the default MYFOLDER folder.
 
 ![](images/franir_2025-03-18-16-54-27.png)
 
-Anything stored in that folder will be saved in the storage area that I defined earlier.
+Anything stored in that folder will be saved in the storage area that you defined earlier.
 
-This is independent of the compute environment that I am using.
+This is independent of the compute environment that you're using.
 
-I can then switch from a compute configuration to a bigger one easily while using the same data and programs.
+You can then switch from a compute configuration to a bigger one easily while using the same data and programs.
 
-## Working with GIT
+## Working with Git
 
+Working with Git repositories in VS Code is extremely easy.
 
+VS Code has integrated source control management (SCM) and includes Git support out-of-the-box.
 
+Let's clone a GitHub repository.
+
+Open the Command Palette by selecting the VS Code Menu > **View** > **Command Palette...**:
+
+![](images/franir_2025-03-19-09-11-34.png)
+
+Start typing "Git C" and select **Git: Clone**:
+
+![](images/franir_2025-03-19-09-14-06.png)
+
+Paste the following GitHub repository URL and press Enter:
+
+```https://github.com/SAS-Innovate-2025/SAS-Viya-Workbench-and-VS-Code.git```
+
+:warning: Do NOT select **Clone from GitHub** as it will ask you to authenticate which we don't want.
+
+![](images/franir_2025-03-19-09-17-08.png)
+
+Navigate to ```/workspaces/myfolder/``` (use the "2 dots" ![](images/franir_2025-03-19-09-37-31.png) to go up one level) or type the path, and click **OK**:
+
+![](images/franir_2025-03-19-09-31-16.png)
+
+When prompted about opening the cloned repository, click **Cancel**. We will still be able to access the repository.
+
+![](images/franir_2025-03-19-09-52-20.png)
+
+You should now see your cloned repository folder in **Explorer**:
+
+![](images/franir_2025-03-19-09-54-27.png)
 
