@@ -5,7 +5,8 @@ This hands-on workshop demonstrates how to leverage the native integration of Vi
 Contents:
 
 - [Logging in to SAS Viya Workbench](#logging-in-to-sas-viya-workbench)
-- [Creating a new workbench](#creating-a-new-workbench)
+- [Demo only - Creating a new workbench](#demo-only---creating-a-new-workbench)
+- [Opening Visual Studio Code](#opening-visual-studio-code)
 - [Working in Visual Studio Code](#working-in-visual-studio-code)
 - [Customizing VS Code](#customizing-vs-code)
 - [Working with Git](#working-with-git)
@@ -15,16 +16,20 @@ Contents:
   - [Reading a CSV file](#reading-a-csv-file)
   - [Reading a JSON file](#reading-a-json-file)
 - [Accessing other data](#accessing-other-data)
-  - [Uploading data](#uploading-data)
-  - [Accessing databases and other cloud object storage](#accessing-databases-and-other-cloud-object-storage)
 - [Interacting with Git and GitHub](#interacting-with-git-and-github)
 - [Working with SAS notebooks](#working-with-sas-notebooks)
+- [Working with Python](#working-with-python)
+- [Closing Visual Studio Code](#closing-visual-studio-code)
+- [Adjusting computing resources](#adjusting-computing-resources)
+- [Going further](#going-further)
+  - [Modern Data Science with SAS Viya Workbench and Python](#modern-data-science-with-sas-viya-workbench-and-python)
+  - [SAS Extension for Visual Studio Code](#sas-extension-for-visual-studio-code)
 
 ## Logging in to SAS Viya Workbench
 
 Follow instructor's directions to get access to SAS Viya Workbench.
 
-## Creating a new workbench
+## Demo only - Creating a new workbench
 
 In SAS Viya Workbench's welcome screen, click on **New workbench**:
 
@@ -68,19 +73,25 @@ You can then choose your favorite IDE to interact with this computing environmen
 
 ![](images/franir_2025-03-18-14-04-47.png)
 
-Are you a SAS developer? A Python programmer? A R specialist?
+Are you a SAS developer? A Python programmer? A R specialist? Which IDE boosts your productivity the most?
 
-Let's open **Visual Studio Code** as this will be the main focus of this hands-on:
+In this session, we are going to explore **Visual Studio Code**.
 
-![](images/franir_2025-03-18-13-51-23.png)
+## Opening Visual Studio Code
+
+In the existing **SASInnovate2025** workbench, which you can access from the **Home** or **Workbenches** tab, click on **Visual Studio Code**:
+
+![](images/franir_2025-03-20-16-55-36.png)
+
+You should see Visual Studio Code opening in a new browser tab.
 
 ## Working in Visual Studio Code
 
-You should see Visual Studio Code opening in a new browser tab:
-
-![](images/franir_2025-03-18-16-46-58.png)
+**Visual Studio Code** (**VS Code**) is a free, open-source code editor developed by Microsoft that supports various programming languages and offers features like debugging, syntax highlighting, and version control.
 
 If you are not familiar with VS Code, take the time to explore the user interface.
+
+![](images/franir_2025-03-18-16-46-58.png)
 
 The **Activity Bar** displays various views and applications, including SAS. Additional applications can be installed through VS Code **extensions**.
 
@@ -96,11 +107,11 @@ The **Source Control** activity will be important when you work with a GIT repos
 
 ![](images/franir_2025-03-18-16-10-36.png)
 
-The Extensions activity allows you to add extensions, customize your environment, improve your productivity with open-source tools, enrich your UI with syntax highlighting editors and much more:
+The **Extensions** activity allows you to add extensions, customize your environment, improve your productivity with open-source tools, enrich your UI with syntax highlighting editors and much more:
 
 ![](images/franir_2025-03-18-16-17-51.png)
 
-SAS is a perfect example of what an extension can bring to your environment: extend default VS Code capabilities with additional features, here by integrating SAS:
+**SAS** is a perfect example of what an extension can bring to your environment: extend default VS Code capabilities with additional features, here by integrating SAS:
 
 ![](images/franir_2025-03-18-16-21-39.png)
 
@@ -324,9 +335,13 @@ Open the resulting REVIEWS table in the REV library.
 
 ## Accessing other data
 
-### Uploading data
+Of course, you're not limited to accessing data solely within a workbench.
 
-### Accessing databases and other cloud object storage
+With SAS, Python, and soon R, you can access various file formats from multiple locations, including databases, cloud object storage, URLs, web services, REST APIs, and more.
+
+Additionally, you can upload data to your workbench directly from your laptop:
+
+![](images/franir_2025-03-20-17-17-22.png)
 
 ## Interacting with Git and GitHub
 
@@ -545,3 +560,70 @@ You should see the new Parquet file created on disk:
 
 ![](images/franir_2025-03-20-14-04-57.png)
 
+Save the SAS notebook by selecting VS Code Menu > **File** > **Save** and save it in your cloned repository under Programs.
+
+## Working with Python
+
+Your workbench computing environment is not dedicated to simply running SAS code.
+
+It also lets developers, data scientists and modelers code in Python (with R support coming soon) through Visual Studio Code or other Jupyter UIs.
+
+In Explorer, navigate to ```SAS-Viya-Workbench-and-VS-Code/Programs``` and open ```python_sample_data_access.ipynb```:
+
+![](images/franir_2025-03-20-15-08-34.png)
+
+It's a simple Python notebook that demonstrates how to access the same data files as you would with SAS.
+
+Run the notebook by selecting **Run All**:
+
+![](images/franir_2025-03-20-15-12-50.png)
+
+A **Select Kernel** dialog should pop up. Select **Python Environments...**:
+
+![](images/franir_2025-03-20-15-24-17.png)
+
+Select the recommended one:
+
+![](images/franir_2025-03-20-15-25-08.png)
+
+You should see some sample data:
+
+![](images/franir_2025-03-20-15-26-34.png)
+
+## Closing Visual Studio Code
+
+Simply close your VS Code browser tab.
+
+## Adjusting computing resources
+
+If you need to experiment with different requirements and require more computing resources, you can adjust your workbench's settings.
+
+On the SAS Viya Workbench welcome page, open the settings of your existing workbench:
+
+![](images/franir_2025-03-20-16-59-34.png)
+
+You will see the **Workbench settings** page, where you can change the allocated computing resources according to your site's administration policies.
+
+![](images/franir_2025-03-20-17-05-49.png)
+
+*Note: You might different values since we have limited the configurations available.*
+
+We won't do that today.
+
+This concludes our Hands-On Workshop!
+
+Thanks for participating!
+
+## Going further
+
+### Modern Data Science with SAS Viya Workbench and Python
+
+Curious about how an end-to-end data science project is managed in SAS Viya Workbench?
+
+You can check this [free course](https://communities.sas.com/t5/SAS-Viya-Workbench-Getting/Modern-Data-Science-with-SAS-Viya-Workbench-and-Python/ta-p/947920) and its [materials](https://github.com/sassoftware/sas-education/tree/main/sas1).
+
+### SAS Extension for Visual Studio Code
+
+Good news! The SAS Extension for Visual Studio Code is not limited to SAS Viya Workbench. You can install it in your own VS Code instance and use it to connect to your SAS Viya or SAS 9 environment.
+
+Check [here](https://developer.sas.com/programming/vs_code_extension) for more information.
