@@ -378,8 +378,170 @@ Select **SAS Notebook**:
 
 ![](images/franir_2025-03-19-16-09-46.png)
 
+In a SAS notebook, we can mix:
 
+- Markdown, a lightweight markup language used to format text with plain syntax for easy conversion to HTML or other formats,
+- SAS code,
+- SQL code,
+- and soon Python.
 
+In your opened SAS notebook, change the first cell language to Markdown:
 
+![](images/franir_2025-03-20-09-52-41.png)
 
+In the Markdown cell, paste the following code:
+
+```markdown
+# Discover data
+
+## Customers
+```
+
+Validate the code by clicking on the check box:
+
+![](images/franir_2025-03-20-09-56-16.png)
+
+You should see this:
+
+![](images/franir_2025-03-20-09-56-55.png)
+
+Add a code cell by clicking on **+ Code**:
+
+![](images/franir_2025-03-20-09-58-18.png)
+
+Check that it is a SAS cell:
+
+![](images/franir_2025-03-20-09-59-05.png)
+
+Paste the following code in the cell to list the columns of the SAS data set:
+
+```sas
+/* List columns */
+proc contents data=churn.customers varnum ;
+run ;
+```
+
+Run the cell:
+
+![](images/franir_2025-03-20-10-03-06.png)
+
+You should get your SAS output right below your code:
+
+![](images/franir_2025-03-20-10-03-52.png)
+
+Add a new Markdown cell at the bottom of your output:
+
+![](images/franir_2025-03-20-10-12-04.png)
+
+Paste the following code:
+
+```markdown
+## Churn
+```
+
+Validate the Markdown cell and add a new code cell:
+
+![](images/franir_2025-03-20-10-15-09.png)
+
+Paste the following code to list the columns of the Parquet data set:
+
+```sas
+/* List columns */
+proc contents data=churn_pq.customer_churn varnum ;
+run ;
+```
+
+Run the cell.
+
+![](images/franir_2025-03-20-10-18-39.png)
+
+Add a new Markdown cell with the following level-2 title (two # signs): "**Build some distribution reports**".
+
+Validate/submit markdown.
+
+Add a SAS code cell, paste and run the frequency report and plot code:
+
+```sas
+proc freq data=churn_pq.customer_churn ;
+   tables lostcustomer / plots=freqplot() ;
+run ;
+```
+
+Check the results and the plot:
+
+![](images/franir_2025-03-20-11-09-10.png)
+
+You can observe that a SAS notebook shows SAS output when the SAS code generates it. You'll learn that it displays the SAS log otherwise.
+
+What if you want to check the log when the code generates output?
+
+Click on the ```...``` > **Change Presentation** between the code and the output:
+
+![](images/franir_2025-03-20-12-04-42.png)
+
+Then select **SAS Log Renderer**:
+
+![](images/franir_2025-03-20-12-06-11.png)
+
+You should see the SAS log now.
+
+Add a new Markdown cell with the following level-1 title (one # sign): "**Join data**".
+
+Add a SQL code cell (the label is mistakenly marked as '**MS SQL**' when it should actually be '**SAS SQL**').
+
+![](images/franir_2025-03-20-11-06-44.png)
+
+This SQL cell allows you to code directly a SAS SQL statement without having to specify ```proc sql``` and ```quit```.
+
+Use the following code to join all five tables:
+
+```sql
+create table churn_wip (drop=custId customerSubscrCode reviewId ordinal_root ordinal_reviews) as
+   select *
+   from churn_pq.customer_churn as churn
+      left join churn.customers as cust on churn.custId=cust.custId
+      left join subscriptions as subs on cust.customerSubscrCode=subs.customerSubscrCode
+      left join churn.techSupportEvals as evals on churn.ID=evals.ID
+      left join rev.reviews as rev on churn.reviewId=rev.reviewId
+```
+
+Run the code and check the log.
+
+Check the table in the WORK library in the SAS extension.
+
+![](images/franir_2025-03-20-13-53-39.png)
+
+Finally, let's save the final table as a Parquet data set.
+
+Add a new Markdown cell with the following level-1 title (one # sign): "**Save final table in Parquet format**".
+
+Add a SAS code cell and paste the following code to save the table as a Parquet file while adding a computed variable:
+
+```sas
+data churn_pq.churn_abt ;
+   set churn_wip ;
+   customerAge=intck('YEAR',birthDate,today(),'C') ;
+run ;
+```
+
+Run the code and check the result:
+
+![](images/franir_2025-03-20-13-57-51.png)
+
+Now, we will check at the file system level how this worked.
+
+Open a new terminal by selecting the VS Code Menu > **Terminal** > **New Terminal**.
+
+![](images/franir_2025-03-20-13-59-43.png)
+
+In the terminal, type the following commands:
+
+```shell
+cd SAS-Viya-Workbench-and-VS-Code/Data/
+ls -ltr
+```
+
+You should see the new Parquet file created on disk:
+
+![](images/franir_2025-03-20-14-04-57.png)
 
