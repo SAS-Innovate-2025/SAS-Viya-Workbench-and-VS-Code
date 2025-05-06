@@ -5,7 +5,7 @@ This hands-on workshop demonstrates how to leverage the native integration of Vi
 Contents:
 
 - [Logging in to SAS Viya Workbench](#logging-in-to-sas-viya-workbench)
-- [Demo only - Creating a new workbench](#demo-only---creating-a-new-workbench)
+- [!!! Demo Only - Creating a new workbench](#-demo-only---creating-a-new-workbench)
 - [Opening Visual Studio Code](#opening-visual-studio-code)
 - [Working in Visual Studio Code](#working-in-visual-studio-code)
 - [Customizing VS Code](#customizing-vs-code)
@@ -29,7 +29,7 @@ Contents:
 
 Follow instructor's directions to get access to SAS Viya Workbench.
 
-## Demo only - Creating a new workbench
+## !!! Demo Only - Creating a new workbench
 
 In SAS Viya Workbench's welcome screen, click on **New workbench**:
 
@@ -79,9 +79,13 @@ In this session, we are going to explore **Visual Studio Code**.
 
 ## Opening Visual Studio Code
 
-In the existing **SASInnovate2025** workbench, which you can access from the **Home** or **Workbenches** tab, click on **Visual Studio Code**:
+If not already started, start your existing workbench, which you can access from the **Home** or **Workbenches** tab, by clicking on **Start workbench** as shown below:
 
-![](images/franir_2025-03-20-16-55-36.png)
+![](images/franir_2025-05-06-13-40-29.png)
+
+Then click on **Visual Studio Code**:
+
+![](images/franir_2025-05-06-13-42-49.png)
 
 You should see Visual Studio Code opening in a new browser tab.
 
